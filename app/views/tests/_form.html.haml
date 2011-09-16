@@ -1,0 +1,160 @@
+= form_for @test do |f|
+
+  - if @test.errors[:string].any?
+    .clearfix.error
+      = f.label :string
+      .input
+        = f.text_field :string, :class => 'error'
+        %span.help-inline
+          - @test.errors[:string].each do |msg|
+            %p.error= msg
+  - else
+    .clearfix
+      = f.label :string
+      .input
+        = f.text_field :string
+
+  - if @test.errors[:text].any?
+    .clearfix.error
+      = f.label :text
+      .input
+        = f.text_area :text, :class => 'xxlarge error'
+        %span.help-inline
+          - @test.errors[:text].each do |msg|
+            %p.error= msg
+  - else
+    .clearfix
+      = f.label :text
+      .input
+        = f.text_area :text, :class => 'xxlarge'
+
+  - if @test.errors[:date].any?
+    .clearfix.error
+      = f.label :date
+      .input
+        = f.date_select :date, {}, :class => 'small error'
+        %span.help-inline
+          - @test.errors[:date].each do |msg|
+            %p.error= msg
+  - else
+    .clearfix
+      = f.label :date
+      .input
+        = f.date_select :date, {}, :class => 'small'
+
+  - if @test.errors[:datetime].any?
+    .clearfix.error
+      = f.label :datetime
+      .input
+        = f.datetime_select :datetime, {}, :class => 'small error'
+        %span.help-inline
+          - @test.errors[:datetime].each do |msg|
+            %p.error= msg
+  - else
+    .clearfix
+      = f.label :datetime
+      .input
+        = f.datetime_select :datetime, {}, :class => 'small'
+
+  - if @test.errors[:boolean].any?
+    .clearfix.error
+      = f.label :boolean
+      .input
+        = f.check_box :boolean, :class => 'error'
+        %span.help-inline
+          - @test.errors[:boolean].each do |msg|
+            %p.error= msg
+  - else
+    .clearfix
+      = f.label :boolean
+      .input
+        = f.check_box :boolean
+
+  - if @test.errors[:integer].any?
+    .clearfix.error
+      = f.label :integer
+      .input
+        = f.number_field :integer, :class => 'error'
+        %span.help-inline
+          - @test.errors[:integer].each do |msg|
+            %p.error= msg
+  - else
+    .clearfix
+      = f.label :integer
+      .input
+        = f.number_field :integer
+
+  - if @test.errors[:float].any?
+    .clearfix.error
+      = f.label :float
+      .input
+        = f.text_field :float, :class => 'error'
+        %span.help-inline
+          - @test.errors[:float].each do |msg|
+            %p.error= msg
+  - else
+    .clearfix
+      = f.label :float
+      .input
+        = f.text_field :float
+
+  - if @test.errors[:decimal].any?
+    .clearfix.error
+      = f.label :decimal
+      .input
+        = f.text_field :decimal, :class => 'error'
+        %span.help-inline
+          - @test.errors[:decimal].each do |msg|
+            %p.error= msg
+  - else
+    .clearfix
+      = f.label :decimal
+      .input
+        = f.text_field :decimal
+
+  - if @test.errors[:timestamp].any?
+    .clearfix.error
+      = f.label :timestamp
+      .input
+        = f.datetime_select :timestamp, {}, :class => 'small error'
+        %span.help-inline
+          - @test.errors[:timestamp].each do |msg|
+            %p.error= msg
+  - else
+    .clearfix
+      = f.label :timestamp
+      .input
+        = f.datetime_select :timestamp, {}, :class => 'small'
+
+  - if @test.errors[:time].any?
+    .clearfix.error
+      = f.label :time
+      .input
+        = f.time_select :time, {}, :class => 'small error'
+        %span.help-inline
+          - @test.errors[:time].each do |msg|
+            %p.error= msg
+  - else
+    .clearfix
+      = f.label :time
+      .input
+        = f.time_select :time, {}, :class => 'small'
+
+  - if @test.errors[:binary].any?
+    .clearfix.error
+      = f.label :binary
+      .input
+        = f.text_field :binary, :class => 'error'
+        %span.help-inline
+          - @test.errors[:binary].each do |msg|
+            %p.error= msg
+  - else
+    .clearfix
+      = f.label :binary
+      .input
+        = f.text_field :binary
+
+
+  .actions
+    = f.submit 'Save', :class => 'btn primary'
+    = link_to 'Back', tests_path, :class => 'btn'

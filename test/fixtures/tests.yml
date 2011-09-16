@@ -1,0 +1,27 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/Fixtures.html
+
+one:
+  string: MyString
+  text: MyText
+  date: 2011-09-16
+  datetime: 2011-09-16 12:18:17
+  boolean: false
+  integer: 1
+  float: 1.5
+  decimal: 9.99
+  timestamp: 2011-09-16 12:18:17
+  time: 2011-09-16 12:18:17
+  binary: 
+
+two:
+  string: MyString
+  text: MyText
+  date: 2011-09-16
+  datetime: 2011-09-16 12:18:17
+  boolean: false
+  integer: 1
+  float: 1.5
+  decimal: 9.99
+  timestamp: 2011-09-16 12:18:17
+  time: 2011-09-16 12:18:17
+  binary: 

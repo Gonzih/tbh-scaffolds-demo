@@ -1,0 +1,42 @@
+%h1 Tests
+
+%table.scaffold.common-table.zebra-stripped.sortable
+  %thead
+    %tr
+      %th String
+      %th Text
+      %th Date
+      %th Datetime
+      %th Boolean
+      %th Integer
+      %th Float
+      %th Decimal
+      %th Timestamp
+      %th Time
+      %th Binary
+      %th.button_column
+      %th.button_column
+      %th.button_column
+
+  %tbody
+    - @tests.each do |test|
+      %tr
+        %td= test.string
+        %td= test.text
+        %td= test.date
+        %td= test.datetime
+        %td= test.boolean
+        %td= test.integer
+        %td= test.float
+        %td= test.decimal
+        %td= test.timestamp
+        %td= test.time
+        %td= test.binary
+        %td.button_column= link_to 'Show', test, :class => 'btn info float_left'
+        %td.button_column= link_to 'Edit', edit_test_path(test), :class => 'btn primary float_left'
+        %td.button_column= link_to 'Destroy', test, :confirm => 'Are you sure?', :method => :delete, :class => 'btn danger float_left'
+
+%br
+
+.actions
+  = link_to 'New Test', new_test_path, :class => 'btn primary '

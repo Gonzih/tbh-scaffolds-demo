@@ -1,0 +1,41 @@
+- if notice
+  .alert-message.success
+    %a.close(href='#') x
+    %p= notice
+
+%p
+  %b String:
+  = @test.string
+%p
+  %b Text:
+  = @test.text
+%p
+  %b Date:
+  = @test.date
+%p
+  %b Datetime:
+  = @test.datetime
+%p
+  %b Boolean:
+  = @test.boolean
+%p
+  %b Integer:
+  = @test.integer
+%p
+  %b Float:
+  = @test.float
+%p
+  %b Decimal:
+  = @test.decimal
+%p
+  %b Timestamp:
+  = @test.timestamp
+%p
+  %b Time:
+  = @test.time
+%p
+  %b Binary:
+  = @test.binary
+
+= link_to 'Edit', edit_test_path(@test), :class => 'btn primary'
+= link_to 'Back', tests_path, :class => 'btn'
