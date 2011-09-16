@@ -32,8 +32,6 @@ group :test do
   gem 'turn', :require => false
 end
 
-group :development do
-  gem 'tbh-scaffolds'
-  #gem 'tbh-scaffolds', :path => '~/mydev/tbh-scaffolds/'
-end
+gem 'tbh-scaffolds'
+#gem 'tbh-scaffolds', :path => '~/mydev/tbh-scaffolds/'
 
